@@ -1102,6 +1102,10 @@ section {
     line-height: 1.6;
 }
 
+.brand-col .logo-img {
+    height: 120px;
+}
+
 .contact-list {
     list-style: none;
     display: flex;
