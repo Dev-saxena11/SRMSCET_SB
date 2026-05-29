@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEEE Student Branch SRMSCET</title>
+    <meta name="description" content="Official website of the IEEE Student Branch. Advancing technology for humanity through workshops, events, hackathons, and networking.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background Canvas for Cosmic Particles -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <div class="nav-container">
+            <a href="#home" class="logo-area" id="nav-logo">
+                <img src="assets/images/Logo.jpeg" alt="IEEE SRMSCET Logo" class="logo-img">
+            </a>
+            
+            <nav class="nav-menu" id="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#events" class="nav-link">Our Events</a>
+                <a href="#team" class="nav-link">Team</a>
+                <a href="#about" class="nav-link">About Us</a>
+                <a href="#wie" class="nav-link">WIE</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Full Screen Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <nav class="mobile-nav-links">
+            <a href="#home" class="mobile-nav-link">Home</a>
+            <a href="#events" class="mobile-nav-link">Our Events</a>
+            <a href="#team" class="mobile-nav-link">Team</a>
+            <a href="#about" class="mobile-nav-link">About Us</a>
+            <a href="#wie" class="mobile-nav-link">WIE</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span> IEEE Student Branch SRMSCET
+                </div>
+                <h1 class="hero-title">Advancing Technology <br><span class="gradient-text">For Humanity</span></h1>
+                <p class="hero-subtitle">Empowering students to innovate, collaborate, and engineer solutions for a sustainable tomorrow. Join a global community of change-makers.</p>
+                <div class="hero-ctas">
+                    <a href="#about" class="btn btn-primary">Discover More</a>
+                    <a href="#events" class="btn btn-secondary">Explore Events</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <!-- Glowing Isometric 3D IEEE Emblem Placeholder -->
+                <div class="emblem-container">
+                    <div class="glow-orb"></div>
+                    <div class="ieee-cube">
+                        <div class="cube-face front">IEEE</div>
+                        <div class="cube-face back">SB</div>
+                        <div class="cube-face right">TECH</div>
+                        <div class="cube-face left">INNOV</div>
+                        <div class="cube-face top"></div>
+                        <div class="cube-face bottom"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Section -->
+        <section id="events" class="events-section">
+            <div class="section-header">
+                <h2 class="section-title">OUR EVENTS <span class="typing-text" id="typing-text"></span></h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="events-grid">
+                <!-- Event 1 -->
+                <div class="event-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <span class="event-number">01</span>
+                            <h3 class="event-title">IEEE Day</h3>
+                            <p class="event-brief">Celebrating global collaboration & innovation.</p>
+                            <span class="hover-tip">Hover to learn more <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                        <div class="card-back">
+                            <h4 class="back-title">IEEE Day</h4>
+                            <p class="back-description">Celebrating the historic first time IEEE members gathered to share technical ideas globally. We host keynote talks, project exhibitions, and coding sprints focused on sustainability and global impact.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Event 2 -->
+                <div class="event-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <span class="event-number">02</span>
+                            <h3 class="event-title">Techblocks</h3>
+                            <p class="event-brief">Hands-on technical bootcamps led by seniors.</p>
+                            <span class="hover-tip">Hover to learn more <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                        <div class="card-back">
+                            <h4 class="back-title">Techblocks</h4>
+                            <p class="back-description">A multi-day workshop series diving deep into web development, artificial intelligence, robotics, and cloud computing. Learn directly from seniors and industry experts with hands-on practice.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Event 3 -->
+                <div class="event-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <span class="event-number">03</span>
+                            <h3 class="event-title">Xenith</h3>
+                            <p class="event-brief">Our flagship annual technical symposium.</p>
+                            <span class="hover-tip">Hover to learn more <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                        <div class="card-back">
+                            <h4 class="back-title">Xenith</h4>
+                            <p class="back-description">An ultimate blend of hackathons, web sprints, hardware design competitions, and technical quizzes that attracts thousands of participants across regions. Showcase your skills and win exciting rewards.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="team-section">
+            <div class="section-header">
+                <h2 class="section-title">MEET THE TEAM<span class="cursor">|</span></h2>
+                <div class="section-divider"></div>
+            </div>
+            <!-- Hexagon grid container -->
+            <div class="honeycomb-container">
+                <!-- Hexagon Item 1 -->
+                <div class="hexagon-wrapper">
+                    <div class="hexagon">
+                        <div class="hex-image-container">
+                            <div class="hex-overlay">
+                                <span class="hex-role">Faculty Coordinator</span>
+                                <span class="hex-name">Dr. Jyoti Agarwal</span>
+                            </div>
+                            <div class="hex-avatar"><i class="fa-solid fa-user-tie"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hexagon Item 2 -->
+                <div class="hexagon-wrapper">
+                    <div class="hexagon">
+                        <div class="hex-image-container">
+                            <div class="hex-overlay">
+                                <span class="hex-role">Chairperson</span>
+                                <span class="hex-name">To Be Provided</span>
+                            </div>
+                            <div class="hex-avatar"><i class="fa-solid fa-user"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hexagon Item 3 -->
+                <div class="hexagon-wrapper">
+                    <div class="hexagon">
+                        <div class="hex-image-container">
+                            <div class="hex-overlay">
+                                <span class="hex-role">Vice-Chairperson</span>
+                                <span class="hex-name">To Be Provided</span>
+                            </div>
+                            <div class="hex-avatar"><i class="fa-solid fa-user"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hexagon Item 4 -->
+                <div class="hexagon-wrapper">
+                    <div class="hexagon">
+                        <div class="hex-image-container">
+                            <div class="hex-overlay">
+                                <span class="hex-role">Secretary</span>
+                                <span class="hex-name">To Be Provided</span>
+                            </div>
+                            <div class="hex-avatar"><i class="fa-solid fa-user"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="about-section">
+            <div class="about-grid">
+                <div class="about-info">
+                    <h2 class="about-title">About SB SRMSCET</h2>
+                    <p class="about-text">
+                        The IEEE Student Branch allows students to connect, build projects, and learn from seniors, faculty, and industry experts. By joining, students gain access to regional conferences, technical workshops, global competitions, and a network of over 400,000 members worldwide.
+                    </p>
+                    <p class="about-text">
+                        Through initiatives like S-PACs (Student Professional Awareness Conferences) and project fund sponsorships, we help bridge the gap between academic theory and industry engineering practices.
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <span class="stat-number">0+</span>
+                        <span class="stat-label">Active Members</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">0+</span>
+                        <span class="stat-label">Annual Events</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">1</span>
+                        <span class="stat-label">Global Community</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Women in Engineering (WIE) Section -->
+        <section id="wie" class="wie-section">
+            <div class="wie-container">
+                <div class="wie-header">
+                    <div class="wie-logo-placeholder">
+                        <i class="fa-solid fa-venus-double"></i>
+                        <span>IEEE WIE Affinity Group</span>
+                    </div>
+                    <h2 class="wie-title">Women in Engineering</h2>
+                    <p class="wie-subtitle">IEEE Women in Engineering (WIE) is a global network dedicated to promoting women engineers and scientists, and inspiring girls worldwide to follow their academic interests in careers in engineering and science.</p>
+                </div>
+                <div class="wie-cards">
+                    <!-- Gallery Card 1 -->
+                    <div class="wie-card">
+                        <div class="wie-card-image placeholder-img">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <div class="wie-card-body">
+                            <h4>Coding Hackathons</h4>
+                            <p>All-women programming sprints and mentorship hackathons.</p>
+                        </div>
+                    </div>
+                    <!-- Gallery Card 2 -->
+                    <div class="wie-card">
+                        <div class="wie-card-image placeholder-img">
+                            <i class="fa-solid fa-people-group"></i>
+                        </div>
+                        <div class="wie-card-body">
+                            <h4>Mentorship Programs</h4>
+                            <p>Connecting students with female leaders in academia and tech.</p>
+                        </div>
+                    </div>
+                    <!-- Gallery Card 3 -->
+                    <div class="wie-card">
+                        <div class="wie-card-image placeholder-img">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div class="wie-card-body">
+                            <h4>Outreach & Seminars</h4>
+                            <p>Encouraging STEM education and careers in local schools.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Wavy SVG Separator -->
+    <div class="svg-divider">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+            <path fill="#0d111d" fill-opacity="1" d="M0,192L48,181.3C96,171,192,149,288,149.3C384,149,480,171,576,197.3C672,224,768,256,864,250.7C960,245,1056,203,1152,181.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact" class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col brand-col">
+                <a href="#home" class="logo-area">
+                    <img src="assets/images/Logo.jpeg" alt="IEEE SRMSCET Logo" class="logo-img">
+                </a>
+                <p class="footer-desc">Advancing Technology for Humanity. Creating a collaborative hub for future innovators and leaders.</p>
+            </div>
+            
+            <div class="footer-col contact-col">
+                <h3>Contact Us</h3>
+                <ul class="contact-list">
+                    <li><i class="fa-solid fa-envelope"></i> <span>ieeesb@college.edu</span></li>
+                    <li><i class="fa-solid fa-phone"></i> <span>+91 98765-43210</span></li>
+                    <li><i class="fa-solid fa-location-dot"></i> <span>Student Branch, Campus CSE Dept.</span></li>
+                </ul>
+            </div>
+
+            <div class="footer-col social-col">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 IEEE Student Branch SRMSCET. All Rights Reserved.</p>
+            <p class="developer-credit">Developed by Student Branch Webmasters</p>
+        </div>
+    </footer>
+
+    <!-- App Script -->
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
