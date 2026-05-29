@@ -466,7 +466,7 @@ section {
 .event-card {
     background-color: transparent;
     perspective: 1000px;
-    height: 350px;
+    height: 460px;
 }
 
 .card-inner {
@@ -539,28 +539,172 @@ section {
     font-weight: 500;
 }
 
+/* ---- Card Back ---- */
 .card-back {
-    background: linear-gradient(145deg, var(--bg-card) 0%, #151c30 100%);
+    background: linear-gradient(145deg, #0d1220 0%, #121828 100%);
     box-shadow: var(--glow-card);
     transform: rotateY(180deg);
-    border-color: var(--secondary);
-    justify-content: center;
-    gap: 1rem;
+    border-color: rgba(157, 78, 221, 0.35);
+    justify-content: flex-start;
+    gap: 0;
+    padding: 1.75rem;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(157, 78, 221, 0.3) transparent;
+}
+
+.card-back::-webkit-scrollbar { width: 4px; }
+.card-back::-webkit-scrollbar-thumb {
+    background: rgba(157, 78, 221, 0.35);
+    border-radius: 2px;
 }
 
 .back-title {
     font-family: var(--font-header);
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 1.15rem;
+    font-weight: 700;
     color: var(--secondary);
     text-shadow: var(--glow-secondary);
+    margin-bottom: 0.4rem;
+    flex-shrink: 0;
 }
 
-.back-description {
-    color: var(--text-main);
-    font-size: 0.95rem;
-    line-height: 1.6;
+.back-summary {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+    font-style: italic;
+    border-left: 2px solid rgba(0, 229, 255, 0.35);
+    padding-left: 0.65rem;
+    margin-bottom: 0.9rem;
+    flex-shrink: 0;
 }
+
+/* Meta grid: date / venue / attendees */
+.back-meta-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    margin-bottom: 0;
+}
+
+.back-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.back-meta-icon {
+    color: var(--primary);
+    font-size: 0.78rem;
+    width: 14px;
+    flex-shrink: 0;
+    opacity: 0.85;
+}
+
+.back-meta-text {
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+}
+
+.back-meta-label {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--text-muted);
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.back-meta-value {
+    font-size: 0.88rem;
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+/* Divider */
+.back-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(157, 78, 221, 0.25), rgba(0, 229, 255, 0.1), transparent);
+    margin: 0.85rem 0;
+    flex-shrink: 0;
+}
+
+/* Section labels */
+.back-section-label {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 0.55rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-shrink: 0;
+}
+
+/* Winners */
+.back-winners {
+    flex-shrink: 0;
+}
+
+.winner-item {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin-bottom: 0.4rem;
+    font-size: 0.88rem;
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+.medal {
+    font-size: 0.62rem;
+    font-weight: 700;
+    padding: 0.18rem 0.45rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+    line-height: 1.4;
+}
+
+.medal-gold   { background: rgba(255, 197, 61, 0.18); color: #ffc53d; border: 1px solid rgba(255, 197, 61, 0.35); }
+.medal-silver { background: rgba(192, 192, 192, 0.12); color: #c8c8c8; border: 1px solid rgba(192, 192, 192, 0.3); }
+.medal-bronze { background: rgba(205, 127, 50, 0.18); color: #cd7f32; border: 1px solid rgba(205, 127, 50, 0.35); }
+
+/* In-charge */
+.back-incharge {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+
+.incharge-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.12rem;
+}
+
+.incharge-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--secondary);
+    font-weight: 700;
+    opacity: 0.85;
+}
+
+.incharge-value {
+    font-size: 0.86rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
 
 /* ==========================================
    TEAM SECTION (STAGGERED HONEYCOMB)
