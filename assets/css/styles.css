@@ -95,10 +95,11 @@ body {
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1.25rem 2rem;
+    padding: 0.85rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-height: 72px;
 }
 
 .logo-area {
@@ -109,7 +110,7 @@ body {
 }
 
 .logo-img {
-    height: 85px;
+    height: 80px;
     width: auto;
     object-fit: contain;
     display: block;
