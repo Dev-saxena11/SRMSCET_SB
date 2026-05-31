@@ -1290,3 +1290,126 @@ section {
         font-size: 2.5rem;
     }
 }
+
+/* ==========================================
+   SRMS × IEEE COLLAB BANNER
+   ========================================== */
+.collab-banner {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: calc(72px + 3rem) 2rem 3rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(160deg, #070b14 0%, #0b1025 50%, #07090e 100%);
+    border-bottom: 1px solid rgba(0, 229, 255, 0.08);
+}
+
+.collab-banner-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 60% 50% at 20% 50%, rgba(0, 229, 255, 0.07) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 50% at 80% 50%, rgba(157, 78, 221, 0.07) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.collab-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.collab-logo-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.collab-logo {
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(0 0 18px rgba(0, 229, 255, 0.25));
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+}
+
+.collab-logo:hover {
+    transform: scale(1.06);
+    filter: drop-shadow(0 0 30px rgba(0, 229, 255, 0.5));
+}
+
+.collab-logo-srms {
+    height: 140px;
+    width: auto;
+    max-width: 300px;
+}
+
+.collab-logo-ieee {
+    height: 140px;
+    width: auto;
+    max-width: 340px;
+}
+
+.collab-x-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.collab-x {
+    font-family: var(--font-header);
+    font-size: 5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+    line-height: 1;
+    animation: collabXPulse 3s ease-in-out infinite;
+    display: block;
+}
+
+@keyframes collabXPulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%       { opacity: 0.7; transform: scale(1.12); }
+}
+
+.collab-tagline {
+    margin-top: 1.75rem;
+    font-family: var(--font-header);
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive adjustments for collab banner */
+@media (max-width: 640px) {
+    .collab-inner {
+        gap: 1.5rem;
+    }
+
+    .collab-logo-srms,
+    .collab-logo-ieee {
+        height: 80px;
+    }
+
+    .collab-x {
+        font-size: 3rem;
+    }
+
+    .collab-tagline {
+        font-size: 0.75rem;
+        text-align: center;
+    }
+}
