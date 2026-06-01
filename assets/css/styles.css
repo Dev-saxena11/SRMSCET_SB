@@ -829,6 +829,24 @@ section {
     transform: scale(1.1);
 }
 
+.hex-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    z-index: 1;
+    transition: var(--transition);
+    filter: brightness(0.85) saturate(1.1);
+}
+
+.hexagon-wrapper:hover .hex-photo {
+    filter: brightness(1) saturate(1.2);
+    transform: scale(1.05);
+}
+
 .hex-overlay {
     position: absolute;
     top: 0;
