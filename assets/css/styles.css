@@ -104,9 +104,10 @@ body {
 
 .logo-area {
     display: flex;
+    flex-direction: column;
     align-items: center;
     text-decoration: none;
-    gap: 0.75rem;
+    gap: 0.15rem;
 }
 
 .logo-img {
@@ -120,6 +121,16 @@ body {
 .logo-img:hover {
     transform: scale(1.03);
     filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.3));
+}
+
+.branch-number {
+    font-family: var(--font-header);
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    white-space: nowrap;
 }
 
 .logo-icon {
@@ -1120,6 +1131,22 @@ section {
     line-height: 1.6;
 }
 
+.footer-branch-id {
+    display: inline-block;
+    margin-top: 0.65rem;
+    font-family: var(--font-header);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--primary);
+    background: rgba(0, 229, 255, 0.08);
+    border: 1px solid rgba(0, 229, 255, 0.25);
+    padding: 0.3rem 0.85rem;
+    border-radius: 100px;
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.1);
+}
+
 .brand-col .logo-img {
     height: 120px;
 }
@@ -1396,8 +1423,17 @@ section {
 }
 
 @keyframes collabXPulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50%       { opacity: 0.7; transform: scale(1.12); }
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: scale(1.12);
+    }
 }
 
 .collab-tagline {
@@ -1430,4 +1466,4 @@ section {
         font-size: 0.75rem;
         text-align: center;
     }
-}
+}
