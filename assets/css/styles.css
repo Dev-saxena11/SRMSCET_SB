@@ -1304,6 +1304,16 @@ section {
         display: none;
     }
 
+    /* Reduce logo size in navbar on mobile */
+    .logo-img {
+        height: 52px;
+    }
+
+    .nav-container {
+        padding: 0.6rem 1.25rem;
+        min-height: 60px;
+    }
+
     .events-grid {
         grid-template-columns: 1fr;
         max-width: 450px;
@@ -1333,6 +1343,30 @@ section {
 
     .hero-title {
         font-size: 2.5rem;
+    }
+
+    /* Honeycomb: shrink hexagons on mobile */
+    .hexagon-wrapper {
+        width: 150px;
+        height: 173px;
+    }
+
+    .honeycomb-container {
+        gap: 1rem;
+    }
+
+    /* Hero section top padding accounts for smaller header */
+    .hero-section {
+        padding-top: 6rem;
+    }
+
+    /* About grid single column padding */
+    .about-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    section {
+        padding: 4rem 1.25rem;
     }
 }
 
@@ -1449,21 +1483,66 @@ section {
 
 /* Responsive adjustments for collab banner */
 @media (max-width: 640px) {
+    .collab-banner {
+        padding: calc(60px + 2rem) 1rem 2rem;
+        overflow-x: hidden;
+    }
+
     .collab-inner {
-        gap: 1.5rem;
+        gap: 1rem;
+        flex-wrap: nowrap;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .collab-logo-wrap {
+        flex: 0 1 auto;
+        min-width: 0;
     }
 
     .collab-logo-srms,
     .collab-logo-ieee {
-        height: 80px;
+        height: 70px;
+        max-width: 130px;
     }
 
     .collab-x {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .collab-tagline {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
         text-align: center;
+        padding: 0 0.5rem;
+        letter-spacing: 0.8px;
+    }
+}
+
+@media (max-width: 400px) {
+    .collab-logo-srms,
+    .collab-logo-ieee {
+        height: 55px;
+        max-width: 100px;
+    }
+
+    .collab-x {
+        font-size: 2rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hexagon-wrapper {
+        width: 130px;
+        height: 150px;
+    }
+
+    .nav-container {
+        padding: 0.5rem 1rem;
+    }
+
+    .logo-img {
+        height: 44px;
     }
 }
