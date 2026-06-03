@@ -1210,7 +1210,64 @@ section {
 }
 
 .developer-credit {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.dev-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 400;
+    opacity: 0.7;
+    white-space: nowrap;
+}
+
+.dev-chips {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.dev-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 0.75rem 0.3rem 0.55rem;
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.8rem;
     font-weight: 500;
+    font-family: var(--font-header);
+    transition: var(--transition);
+    white-space: nowrap;
+    letter-spacing: 0.2px;
+}
+
+.dev-chip-icon {
+    font-size: 0.85rem;
+    color: #0a66c2;
+    transition: var(--transition);
+    opacity: 0.7;
+}
+
+.dev-chip:hover {
+    background: rgba(10, 102, 194, 0.12);
+    border-color: rgba(10, 102, 194, 0.4);
+    color: var(--text-main);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(10, 102, 194, 0.15);
+}
+
+.dev-chip:hover .dev-chip-icon {
+    opacity: 1;
+    filter: drop-shadow(0 0 4px rgba(10, 102, 194, 0.5));
 }
 
 /* ==========================================
@@ -1339,6 +1396,14 @@ section {
         flex-direction: column;
         gap: 1rem;
         text-align: center;
+    }
+
+    .developer-credit {
+        justify-content: center;
+    }
+
+    .dev-chips {
+        justify-content: center;
     }
 
     .hero-title {
