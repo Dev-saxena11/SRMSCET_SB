@@ -1611,3 +1611,149 @@ section {
         height: 44px;
     }
 }
+
+/* ==========================================
+   NAV ACTIONS & THEME TOGGLE
+   ========================================== */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.theme-toggle {
+    background: transparent;
+    border: none;
+    color: var(--text-main);
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem;
+}
+
+.theme-toggle:hover {
+    color: var(--primary);
+    transform: scale(1.1);
+}
+
+/* ==========================================
+   LIGHT MODE OVERRIDES
+   ========================================== */
+html.light-mode {
+    --bg-dark: #f8fafc;
+    --bg-card: #ffffff;
+    --bg-footer: #f1f5f9;
+
+    --primary: #0077b6;
+    --secondary: #6b21a8;
+    --text-main: #0f172a;
+    --text-muted: #475569;
+
+    --glow-primary: 0 0 15px rgba(0, 119, 182, 0.3);
+    --glow-secondary: 0 0 15px rgba(107, 33, 168, 0.3);
+    --glow-card: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+html.light-mode .main-header {
+    background: rgba(248, 250, 252, 0.85);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+html.light-mode .btn-secondary {
+    background: rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+html.light-mode .btn-secondary:hover {
+    background: rgba(0, 0, 0, 0.08);
+}
+
+html.light-mode .cube-face {
+    background: rgba(255, 255, 255, 0.85);
+}
+
+html.light-mode .card-front {
+    background: linear-gradient(145deg, #ffffff 0%, rgba(248, 250, 252, 0.9) 100%);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+html.light-mode .card-back {
+    background: linear-gradient(145deg, #f1f5f9 0%, #e2e8f0 100%);
+}
+
+html.light-mode .back-summary {
+    border-left: 2px solid rgba(0, 119, 182, 0.5);
+}
+
+html.light-mode .back-divider {
+    background: linear-gradient(90deg, rgba(107, 33, 168, 0.15), rgba(0, 119, 182, 0.1), transparent);
+}
+
+html.light-mode .medal-gold {
+    background: rgba(255, 197, 61, 0.2);
+    border: 1px solid rgba(255, 197, 61, 0.5);
+}
+
+html.light-mode .medal-silver {
+    background: rgba(148, 163, 184, 0.2);
+    color: #475569;
+    border: 1px solid rgba(148, 163, 184, 0.5);
+}
+
+html.light-mode .medal-bronze {
+    background: rgba(205, 127, 50, 0.2);
+    border: 1px solid rgba(205, 127, 50, 0.5);
+}
+
+html.light-mode .hexagon {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.05) 100%);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+html.light-mode .hex-overlay {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+html.light-mode .stat-card {
+    background: rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+html.light-mode .wie-card {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+html.light-mode .wie-card-image {
+    background: rgba(0, 0, 0, 0.02);
+    color: rgba(0, 0, 0, 0.1);
+}
+
+html.light-mode .main-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+html.light-mode .footer-container {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+html.light-mode .social-links a {
+    background: rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+html.light-mode .dev-chip {
+    background: rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+html.light-mode .collab-banner {
+    background: linear-gradient(160deg, #f1f5f9 0%, #e2e8f0 50%, #f8fafc 100%);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+html.light-mode .mobile-menu-overlay {
+    background: rgba(248, 250, 252, 0.95);
+}

@@ -1,4 +1,42 @@
 /* ==========================================
+   THEME TOGGLE
+   ========================================== */
+const themeToggleBtn = document.getElementById('theme-toggle');
+const themeIcon = document.getElementById('theme-icon');
+
+// Check for saved theme preference or system preference
+const savedTheme = localStorage.getItem('theme');
+const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+
+// Function to set theme
+function setTheme(isLight) {
+    if (isLight) {
+        document.documentElement.classList.add('light-mode');
+        if(themeIcon) themeIcon.classList.replace('fa-sun', 'fa-moon');
+        localStorage.setItem('theme', 'light');
+    } else {
+        document.documentElement.classList.remove('light-mode');
+        if(themeIcon) themeIcon.classList.replace('fa-moon', 'fa-sun');
+        localStorage.setItem('theme', 'dark');
+    }
+}
+
+// Initial theme setup
+if (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) {
+    setTheme(true);
+} else {
+    // Explicitly set to dark to ensure the icon is correct even if system is dark
+    setTheme(false);
+}
+
+if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+        const isLightMode = document.documentElement.classList.contains('light-mode');
+        setTheme(!isLightMode);
+    });
+}
+
+/* ==========================================
    MOBILE MENU TOGGLE
    ========================================== */
 const menuToggle = document.getElementById('menu-toggle');
@@ -127,14 +165,22 @@ class Particle {
         this.baseX = this.x;
         this.baseY = this.y;
         
-        // Colors range between cyan and purple
-        this.color = Math.random() > 0.5 ? 'rgba(0, 229, 255, 0.4)' : 'rgba(157, 78, 221, 0.4)';
+        // Save which color variant this particle uses
+        this.colorType = Math.random() > 0.5 ? 1 : 2;
     }
 
     draw() {
+        const isLight = document.documentElement.classList.contains('light-mode');
+        let color;
+        if (this.colorType === 1) {
+            color = isLight ? 'rgba(0, 119, 182, 0.4)' : 'rgba(0, 229, 255, 0.4)';
+        } else {
+            color = isLight ? 'rgba(107, 33, 168, 0.4)' : 'rgba(157, 78, 221, 0.4)';
+        }
+
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = this.color;
+        ctx.fillStyle = color;
         ctx.fill();
     }
 
@@ -203,7 +249,9 @@ function drawLines() {
 
             if (distance < 100) {
                 let opacity = (100 - distance) / 1000;
-                ctx.strokeStyle = `rgba(0, 229, 255, ${opacity})`;
+                const isLight = document.documentElement.classList.contains('light-mode');
+                const rgb = isLight ? '0, 119, 182' : '0, 229, 255';
+                ctx.strokeStyle = `rgba(${rgb}, ${opacity})`;
                 ctx.lineWidth = 0.5;
                 ctx.beginPath();
                 ctx.moveTo(particles[a].x, particles[a].y);
